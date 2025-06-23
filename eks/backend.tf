@@ -8,8 +8,8 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "terraform-eks-1928"
-    region         = "eu-north-1"
+    bucket         = "terraform-eks-1921"
+    region         = "us-east-1"
     key            = "eks/terraform.tfstate"
     dynamodb_table = "terraform-lock-table"
     encrypt        = true
