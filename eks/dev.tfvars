@@ -1,5 +1,5 @@
 env                   = "dev"
-aws-region            = "eu-north-1"
+aws-region            = "us-east-1"
 vpc-cidr-block        = "10.16.0.0/16"
 vpc-name              = "vpc"
 igw-name              = "igw"
