@@ -5,5 +5,6 @@ terraform {
     region = "us-east-1"
     dynamodb_table = "terraform-lock-table"
     encrypt        = true
+    lock_timeout   = "60s"
   }
 }
