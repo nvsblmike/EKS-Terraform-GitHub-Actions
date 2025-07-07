@@ -92,7 +92,7 @@ resource "aws_route_table_association" "name" {
 }
 
 resource "aws_eip" "ngw-eip" {
-  domain = "dev-eks-cluster-vpc"
+  domain = "vpc"
 
   tags = {
     Name = var.eip-name
