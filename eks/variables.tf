@@ -16,6 +16,7 @@ variable "pri-subnet-count" {}
 variable "pri-cidr-block" {
   type = list(string)
 }
+variable "aws_region" {}
 variable "pri-availability-zone" {
   type = list(string)
 }

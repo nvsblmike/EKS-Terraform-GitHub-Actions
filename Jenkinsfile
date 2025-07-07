@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Git Pulling') {
             steps {
-                git branch: 'master', url: 'https://github.com/nvsblmike/EKS-Terraform-GitHub-Actions.git'
+                git credentialsId:'github-token-newer', branch: 'master', url: 'https://github.com/nvsblmike/EKS-Terraform-GitHub-Actions.git'
             }
         }
         stage('Init') {

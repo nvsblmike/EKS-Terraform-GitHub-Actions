@@ -18,6 +18,7 @@ variable "pri-cidr-block" {
 variable "pri-availability-zone" {
   type = list(string)
 }
+variable "aws_region" {}
 variable "pri-sub-name" {}
 variable "public-rt-name" {}
 variable "private-rt-name" {}

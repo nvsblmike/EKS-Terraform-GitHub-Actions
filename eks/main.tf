@@ -6,6 +6,7 @@ locals {
 module "eks" {
   source = "../module"
 
+  aws_region = var.aws_region
   env                   = var.env
   cluster-name          = "${local.env}-${local.org}-${var.cluster-name}"
   cidr-block            = var.vpc-cidr-block

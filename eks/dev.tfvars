@@ -1,26 +1,26 @@
 env                   = "dev"
 aws-region            = "us-east-1"
 vpc-cidr-block        = "10.16.0.0/16"
-vpc-name              = "vpc"
-igw-name              = "igw"
+vpc-name              = "dev-eks-cluster-vpc"
+igw-name              = "dev-eks-cluster-igw"
 pub-subnet-count      = 3
 pub-cidr-block        = ["10.16.0.0/20", "10.16.16.0/20", "10.16.32.0/20"]
 pub-availability-zone = ["us-east-1a", "us-east-1b", "us-east-1c"]
-pub-sub-name          = "subnet-public"
+pub-sub-name          = "dev-eks-cluster-subnet-public"
 pri-subnet-count      = 3
 pri-cidr-block        = ["10.16.128.0/20", "10.16.144.0/20", "10.16.160.0/20"]
 pri-availability-zone = ["us-east-1a", "us-east-1b", "us-east-1c"]
-pri-sub-name          = "subnet-private"
-public-rt-name        = "public-route-table"
-private-rt-name       = "private-route-table"
-eip-name              = "elasticip-ngw"
-ngw-name              = "ngw"
-eks-sg                = "eks-sg"
-
+pri-sub-name          = "dev-eks-cluster-subnet-private"
+public-rt-name        = "dev-eks-cluster-public-route-table"
+private-rt-name       = "dev-eks-cluster-private-route-table"
+eip-name              = "dev-eks-cluster-elasticip-ngw"
+ngw-name              = "dev-eks-cluster-ngw"
+eks-sg                = "dev-eks-cluster-eks-sg"
+aws_region = "us-east-1"
 # EKS
 is-eks-cluster-enabled     = true
 cluster-version            = "1.31"
-cluster-name               = "eks-cluster"
+cluster-name               = "dev-eks-cluster"
 endpoint-private-access    = true
 endpoint-public-access     = false
 ondemand_instance_types    = ["t3.medium"]

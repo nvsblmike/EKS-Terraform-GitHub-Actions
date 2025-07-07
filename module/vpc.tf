@@ -20,7 +20,7 @@ resource "aws_internet_gateway" "igw" {
 
   tags = {
     Name                                          = var.igw-name
-    env                                           = var.env
+    Env                                           = var.env
     "kubernetes.io/cluster/${local.cluster-name}" = "owned"
   }
 
@@ -92,7 +92,7 @@ resource "aws_route_table_association" "name" {
 }
 
 resource "aws_eip" "ngw-eip" {
-  domain = "vpc"
+  domain = "dev-eks-cluster-vpc"
 
   tags = {
     Name = var.eip-name
