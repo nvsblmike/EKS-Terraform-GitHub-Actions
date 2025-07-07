@@ -43,9 +43,9 @@ pipeline {
                         if (params.Terraform_Action == 'plan') {
                             sh "terraform -chdir=eks/ plan -var-file=${params.Environment}.tfvars -lock=false"
                         }   else if (params.Terraform_Action == 'apply') {
-                            sh "terraform -chdir=eks/ apply -var-file=${params.Environment}.tfvars -auto-approve"
+                            sh "terraform -chdir=eks/ apply -var-file=${params.Environment}.tfvars -auto-approve -lock=false"
                         }   else if (params.Terraform_Action == 'destroy') {
-                            sh "terraform -chdir=eks/ destroy -var-file=${params.Environment}.tfvars -auto-approve"
+                            sh "terraform -chdir=eks/ destroy -var-file=${params.Environment}.tfvars -auto-approve -lock=false"
                         } else {
                             error "Invalid value for Terraform_Action: ${params.Terraform_Action}"
                         }
