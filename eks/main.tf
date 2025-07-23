@@ -1,5 +1,5 @@
 locals {
-  org = "medium"
+  org = "nvsbl"
   env = var.env
 }
 
